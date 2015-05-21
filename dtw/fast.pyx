@@ -38,7 +38,7 @@ def dtw_fast_precomputed(np.ndarray[DTYPE_t,ndim=2] d):
     return dtw, dtw[nrows,ncols]
 
 # Cython version of the trackeback function
-def _trackeback(D):
+def _trackeback_fast(D):
     cdef int i
     cdef int j
     i, j = np.array(D.shape) - 1
